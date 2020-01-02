@@ -3,12 +3,10 @@ $font-family: 'Josefin Sans',
 sans-serif;
 
 body {
-    background: url('/images/bg-pattern-desktop.svg');
+    background: url('../images/bg-pattern-desktop.svg');
     background-repeat: no-repeat;
     background-size: cover;
     font-family: $font-family;
-    height: 100vh;
-    background-position: center;
 }
 
 header {
@@ -183,7 +181,7 @@ main {
 @media only screen and (max-width: 768px) {
     body {
         background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),
-            url('/images/hero-desktop.jpg');
+            url('../images/hero-desktop.jpg');
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -224,7 +222,7 @@ main {
 @media only screen and (max-width: 1024px) {
     body {
         background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),
-            url('/images/hero-desktop.jpg');
+            url('../images/hero-desktop.jpg');
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -246,16 +244,15 @@ main {
                 .hero-desktop {
                     display: none;
                 }
-
             }
         }
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
     body {
         background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
-            url('/images/hero-desktop.jpg');
+            url('../images/hero-desktop.jpg');
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -277,7 +274,6 @@ main {
                 .hero-desktop {
                     display: none;
                 }
-
             }
         }
     }
