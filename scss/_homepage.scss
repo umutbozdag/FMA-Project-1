@@ -1,0 +1,284 @@
+$font-size: 16px;
+$font-family: 'Josefin Sans',
+sans-serif;
+
+body {
+    background: url('/images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: $font-family;
+    height: 100vh;
+    background-position: center;
+}
+
+header {
+    display: inline-block;
+
+    .container {
+        padding: 100px 120px;
+
+    }
+}
+
+main {
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .left {
+            padding: 0 120px;
+
+            h1 {
+                line-height: 1.3;
+                letter-spacing: 12px;
+                font-size: 54px;
+                font-weight: 400;
+
+                span {
+                    color: $primary-red;
+                    font-weight: 300;
+                }
+            }
+
+            p {
+                color: $primary-red;
+                width: 400px;
+                line-height: 1.3;
+            }
+
+            .input-section {
+                display: flex;
+                margin-top: 24px;
+                position: relative;
+
+                input {
+                    width: 100%;
+                    border: 1px solid $primary-red;
+                    border-radius: 30px;
+                    padding: 12px 24px;
+                    background: transparent;
+                    outline: 0;
+                }
+
+                ::placeholder {
+                    color: $primary-red;
+                }
+
+                button {
+                    display: flex;
+                    border-radius: 24px;
+                    border: 0;
+                    background: linear-gradient($gradient-passive);
+                    padding: 6px 36px;
+                    margin-left: -64px;
+                    cursor: pointer;
+                    outline: 0;
+
+                    &:hover {
+                        transform: scale(1.2);
+                        transition: all 0.2s ease;
+                    }
+                }
+
+                .icon-error {
+                    position: absolute;
+                    width: 22px;
+                    height: 22px;
+                    right: 100px;
+                    top: 10px;
+                    display: none;
+                }
+            }
+
+            .invalid-text {
+                font-size: 12px;
+                margin-left: 8px;
+                color: $primary-soft-red;
+                display: none;
+            }
+
+        }
+
+        .right {
+            .hero-desktop {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                z-index: -99;
+            }
+
+            .hero-mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 425px) {
+    body {
+        background: none !important;
+    }
+
+    header {
+        .container {
+            padding: 24px;
+
+            img {
+                width: 120px !important;
+            }
+        }
+    }
+
+    main {
+        .container {
+            flex-direction: column;
+            justify-content: center;
+
+            .left {
+                padding: 0px;
+                order: 2;
+                text-align: center;
+
+                h1 {
+                    font-size: 36px;
+                    color: black !important;
+
+                    span {
+                        font-weight: 300;
+                    }
+                }
+
+                p {
+                    font-size: $font-size;
+                    width: 300px;
+                }
+
+                .input-section {
+                    justify-content: center;
+
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .right {
+                .hero-desktop {
+                    display: none;
+                }
+
+                .hero-mobile {
+                    display: block;
+                    margin-bottom: 24px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* For tablets */
+@media only screen and (max-width: 768px) {
+    body {
+        background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),
+            url('/images/hero-desktop.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    header {
+        .container {
+            img {
+                width: 200px;
+            }
+        }
+    }
+
+    main {
+        .container {
+
+            .left {
+                order: 2;
+                padding: 0px;
+
+                .input-section {
+                    margin-top: 48px;
+
+                }
+            }
+
+            .right {
+
+                .hero-desktop {
+                    display: none;
+
+                }
+            }
+        }
+    }
+}
+
+/* For laptops */
+@media only screen and (max-width: 1024px) {
+    body {
+        background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),
+            url('/images/hero-desktop.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    main {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .left {
+
+                h1 {
+                    color: white;
+                }
+            }
+
+            .right {
+                .hero-desktop {
+                    display: none;
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
+            url('/images/hero-desktop.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    main {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .left {
+
+                h1 {
+                    color: white;
+                }
+            }
+
+            .right {
+                .hero-desktop {
+                    display: none;
+                }
+
+            }
+        }
+    }
+}
